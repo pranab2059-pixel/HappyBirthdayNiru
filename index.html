@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday Niru 🎂</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+:root{--bg1:#ffdde1;--bg2:#ee9ca7;--card:#ffffff;--ink:#4a0033;--sub:#6b3a58;--pink:#e60073;--pink2:#c40061;--soft:#fde2ec;--line:#f3b3cb;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#2a0f1d;--bg2:#4a1731;--card:#3a1a2b;--ink:#ffe4ee;--sub:#f5b6cd;--pink:#ff5c9a;--pink2:#ff7aae;--soft:#52213a;--line:#7a2a4d}}
+:root[data-theme="dark"]{--bg1:#2a0f1d;--bg2:#4a1731;--card:#3a1a2b;--ink:#ffe4ee;--sub:#f5b6cd;--pink:#ff5c9a;--pink2:#ff7aae;--soft:#52213a;--line:#7a2a4d}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;font-family:'Roboto',system-ui,sans-serif;color:var(--ink);text-align:center;background:linear-gradient(135deg,var(--bg1),var(--bg2));overflow-x:hidden}
+.card{position:relative;z-index:2;width:100%;max-width:600px;background:var(--card);border-radius:25px;padding:30px 25px;box-shadow:0 15px 40px rgba(0,0,0,.25);animation:fade 1s}
+h1{font-size:28px;margin:.2em 0 .3em;color:var(--pink)}
+p{font-size:18px;line-height:1.6;margin:.6em 0;color:var(--sub);white-space:pre-line}
+.big{font-size:3.4rem;margin:0}
+input{width:100%;padding:14px 16px;font:inherit;font-size:17px;border-radius:14px;border:2px solid var(--line);background:transparent;color:var(--ink);outline:none;margin-top:10px}
+input:focus{border-color:var(--pink)}
+button{margin:14px 6px 0;padding:15px 35px;border:0;border-radius:30px;background:var(--pink);color:#fff;font:inherit;font-size:16px;cursor:pointer;transition:.3s}
+button:hover{background:var(--pink2)}
+button.no{background:#6b7280}
+.row{min-height:90px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap}
+.hidden{display:none}
+.wish{font-style:italic;color:var(--ink);background:var(--soft);border-radius:12px;padding:8px 14px;display:inline-block}
+.count{display:flex;gap:10px;justify-content:center;margin:16px 0}
+.count div{background:var(--soft);border-radius:14px;padding:10px 12px;min-width:66px}
+.count b{display:block;font-size:1.5rem;color:var(--pink)}
+.count span{font-size:.75rem;color:var(--sub)}
+.bar{height:16px;background:var(--soft);border-radius:20px;overflow:hidden;margin:18px 0 6px}
+.bar i{display:block;height:100%;width:0;background:var(--pink);border-radius:20px;transition:width 3.4s linear}
+.flame{font-size:3.4rem;cursor:pointer;display:inline-block;animation:flick 1s ease-in-out infinite;user-select:none}
+@keyframes flick{50%{transform:scale(1.12) rotate(4deg)}}
+.pass{border:2px dashed var(--pink);border-radius:18px;padding:14px;margin:16px 0;background:var(--soft);text-align:left}
+.pass .top{display:flex;justify-content:space-between;font-size:12px;letter-spacing:2px;color:var(--sub);font-weight:700}
+.pass .name{font-size:22px;font-weight:700;color:var(--ink);margin:6px 0}
+.scratch{position:relative;border-radius:12px;overflow:hidden;margin-top:8px;touch-action:none}
+.scratch .under{padding:14px;text-align:center;background:var(--card);color:var(--ink)}
+.scratch .under b{font-size:26px;color:var(--pink);display:block}
+.scratch canvas{position:absolute;inset:0;width:100%;height:100%;z-index:3;touch-action:none;cursor:pointer}
+.game{margin-top:20px;padding-top:16px;border-top:2px dashed var(--line)}
+.game h2{font-size:20px;margin:0 0 4px;color:var(--ink)}
+.game .row2{display:flex;gap:8px;align-items:center;justify-content:center}
+.game .row2 input{margin-top:0}
+.game .row2 button{margin:0;padding:14px 20px;white-space:nowrap}
+.meter{position:relative;height:14px;border-radius:20px;margin:16px 4px 6px;background:linear-gradient(90deg,#60a5fa,#fde047,#f97316,#ef4444)}
+.meter i{position:absolute;top:-6px;left:50%;width:26px;height:26px;margin-left:-13px;border-radius:50%;background:var(--card);border:3px solid var(--pink);transition:left .6s cubic-bezier(.3,1.6,.5,1)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:8px}
+.chip{font-size:12px;background:var(--soft);color:var(--ink);border-radius:999px;padding:4px 10px}
+.shake{animation:shk .5s}
+@keyframes shk{20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+.mlab{display:flex;justify-content:space-between;font-size:12px;color:var(--sub);padding:0 4px}
+.clues{margin-top:20px;padding-top:16px;border-top:2px dashed var(--line)}
+.clues h2{font-size:20px;margin:0 0 6px;color:var(--ink)}
+.slots{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:10px 0}
+.slots .w{display:flex;gap:4px}
+.slots b{width:24px;border-bottom:3px solid var(--pink);font-size:21px;color:var(--ink);padding-bottom:2px}
+.cbox{background:var(--soft);border-radius:14px;padding:14px;min-height:3.6em;font-size:17px;color:var(--ink);line-height:1.5;margin:10px 0}
+.tiles{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:8px}
+.tile{font-size:11px;line-height:1.3;padding:6px 2px;border-radius:10px;background:var(--soft);color:var(--sub);cursor:pointer;user-select:none}
+.tile.today{border:2px solid var(--pink);color:var(--ink);font-weight:700;animation:glow 1.6s ease-in-out infinite}
+.tile.lock{opacity:.5}
+@keyframes glow{50%{box-shadow:0 0 12px var(--pink)}}
+.pulse b{color:#ef4444;animation:pls 1s infinite}
+@keyframes pls{50%{transform:scale(1.15)}}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:9;touch-action:none}
+.float{position:fixed;bottom:-60px;font-size:30px;z-index:1;animation:up linear infinite;opacity:.8;user-select:none;pointer-events:none}
+@keyframes up{to{transform:translateY(-120vh) rotate(360deg)}}
+@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<canvas id="fx"></canvas>
+<div class="card">
+
+  <div id="locked">
+    <p class="big">🎁</p>
+    <h1>केही special तिमीलाई पर्खिरहेको छ…</h1>
+    <p>मंसिर २८ को बिहान १२ बजे (नेपाली समय) मा खुल्छ।
+Peek गर्नु हुँदैन! 😘</p>
+    <div class="count" id="count"></div>
+    <p id="lastday" class="hidden" style="color:#ef4444;font-weight:700;font-size:16px;margin:0">⏰ अन्तिम २४ घण्टा… 🫣</p>
+    <div class="clues">
+      <h2>🔍 रोजको Clue</h2>
+      <p id="cstreak" style="font-size:13px;margin:0 0 4px"></p>
+      <p style="font-size:14px;margin:4px 0">🔐 Secret message (रोज एक अक्षर खुल्छ)</p>
+      <div class="slots" id="slots"></div>
+      <div class="cbox" id="cbox"></div>
+      <div class="tiles" id="tiles"></div>
+    </div>
+    <div class="game">
+      <h2>🎯 पर्खिँदा खेल खेलौं!</h2>
+      <p style="font-size:15px;margin:.2em 0 .8em">मेरो gift के होला? Guess गर। म भन्छु: तातो कि चिसो 😏</p>
+      <div class="row2"><input id="gin" type="text" maxlength="40" placeholder="तिम्रो guess…" autocomplete="off"><button id="gbtn">Guess</button></div>
+      <div class="meter"><i id="mk"></i></div>
+      <div class="mlab"><span>🥶 चिसो</span><span>🔥 तातो</span></div>
+      <p id="gres" style="font-size:17px;min-height:3em;color:var(--ink)"></p>
+      <p id="gcnt" style="font-size:12px;margin:0"></p>
+      <div class="chips" id="ghist"></div>
+    </div>
+  </div>
+
+  <div id="s1" class="hidden">
+    <p class="big">🎂</p>
+    <h1 id="hb">Happy Birthday, Niru!</h1>
+    <div id="candle">
+      <p>आज तिम्रो दिन हो 💖
+मैनबत्ती फुक्न तल थिच, अनि wish गर।</p>
+      <span class="flame" id="flame">🕯️</span>
+      <p style="font-size:14px">(मैनबत्ती थिच्नुस्)</p>
+    </div>
+    <div id="wishbox" class="hidden">
+      <p>🌟 मैनबत्ती निभ्यो! अब universe ले तिम्रो कुरा सुन्छ।
+एउटा gift manifest गर।</p>
+      <input id="wish" type="text" maxlength="80" placeholder="तिमीलाई के चाहिन्छ? यहाँ लेख…" autocomplete="off">
+      <button id="go">Manifest गर ✨</button>
+    </div>
+  </div>
+
+  <div id="send" class="hidden">
+    <p class="big">🚀</p>
+    <h1>Wish पठाउँदै…</h1>
+    <div class="bar"><i id="barfill"></i></div>
+    <p id="sendmsg" style="font-size:16px">Universe लाई सम्पर्क गर्दै…</p>
+  </div>
+
+  <div id="s2" class="hidden">
+    <p class="big">🔮</p>
+    <h1>Universe ले जवाफ दियो!</h1>
+    <p style="font-size:16px">तिमीले माग्यौ:</p>
+    <span class="wish" id="echo"></span>
+    <p style="font-size:16px;margin-top:14px">तर पहिला एउटा प्रश्न…</p>
+    <p style="font-size:22px;color:var(--ink);margin-top:0"><b>के तिमीले Pranab माग्यौ?</b></p>
+    <div class="row">
+      <button id="yes">Yes 💖</button>
+      <button id="no" class="no">No</button>
+    </div>
+    <p id="taunt" style="min-height:1.5em;font-size:15px"></p>
+  </div>
+
+  <div id="s3" class="hidden">
+    <p class="big">🎉</p>
+    <h1>Wish granted! 💖</h1>
+    <p style="font-size:16px">Pranab त आयो नै… तर gift यतिमै सकिँदैन।
+तिम्रो boarding pass तयार छ। Scratch गर!</p>
+    <div class="pass">
+      <div class="top"><span>BOARDING PASS</span><span>✈</span></div>
+      <div class="name" id="pname">NIRU</div>
+      <div style="font-size:13px;color:var(--sub)">FROM: NEPAL 🇳🇵 &nbsp; TO: ???</div>
+      <div class="scratch" id="scratch">
+        <div class="under"><b>VIETNAM 🇻🇳</b><span style="font-size:14px">25 December · Seat: Pranab ko छेउमा 😘</span></div>
+        <canvas id="sc"></canvas>
+      </div>
+    </div>
+    <p id="after" class="hidden">बाँकी कुरा म आफैँ भन्छु… 😘
+Happy Birthday Niru! 💕</p>
+  </div>
+
+</div>
+
+<script>
+var HER_NAME = "Niru";
+// Opens at 00:00 on Mangsir 28, 2083 BS = 14 Dec 2026, Nepal time (UTC+5:45) = 13 Dec 2026 18:15 UTC.
+// Uses an absolute moment, so it works the same on any device or time zone.
+var UNLOCK = Date.UTC(2026, 11, 13, 18, 15, 0);
+// Add #preview to the link to bypass the lock for testing.
+// Add #test-5 (any number) to simulate 5 days left and see that day's clue.
+
+var $ = function(id){ return document.getElementById(id); };
+var ALL = ["locked","s1","send","s2","s3"];
+function show(id){ ALL.forEach(function(x){ $(x).classList.toggle("hidden", x !== id); }); }
+if (HER_NAME){ $("hb").textContent = "Happy Birthday, " + HER_NAME + "!"; $("pname").textContent = HER_NAME.toUpperCase(); }
+
+["💖","🎈","✨","💖","🎂","💫","🎈"].forEach(function(e,i){
+  var d = document.createElement("div"); d.className = "float"; d.textContent = e;
+  d.style.left = (8 + i * 13) + "%"; d.style.animationDuration = (9 + i * 2) + "s"; d.style.animationDelay = (-i * 2) + "s";
+  document.body.appendChild(d);
+});
+
+// Trusted clock: time comes from the web server, not her phone's clock.
+// performance.now() is monotonic, so changing the phone's date/time cannot move it.
+var synced = false, failN = 0, serverBase = 0, perfBase = 0;
+function sync(){
+  var t0 = performance.now();
+  fetch(location.href.split("#")[0], {method: "HEAD", cache: "no-store"}).then(function(r){
+    var d = r.headers.get("Date"), t = d ? Date.parse(d) : NaN;
+    if (isNaN(t)) throw new Error("no date");
+    t += (parseInt(r.headers.get("Age") || "0", 10) || 0) * 1000;
+    var t1 = performance.now();
+    serverBase = t + (t1 - t0) / 2; perfBase = t1; synced = true; failN = 0;
+  }).catch(function(){
+    failN++;
+    if (!synced) setTimeout(sync, 3000);
+  });
+}
+// Returns the current time in ms, or null while still checking the server.
+// Falls back to the phone's clock only if the server can't be reached 3 times in a row.
+function clockNow(){
+  if (synced) return serverBase + (performance.now() - perfBase);
+  if (failN >= 3 || /^#test-/.test(location.hash)) return Date.now();
+  return null;
+}
+sync(); setInterval(sync, 30000);
+document.addEventListener("visibilitychange", function(){ if (!document.hidden) sync(); });
+
+// Daily clues (one new clue per Nepal day; she must come back every day)
+var CLUES = [
+  "🔍 आजदेखि रोज एउटा clue खुल्छ। हरेक दिन एक पटक आऊ। (अन्तिम दिनसम्म आउनुपर्छ है!)",
+  "तल एउटा secret message लुकेको छ। रोज एक अक्षर खुल्छ 🤐",
+  "Pranab ले यो कुरा धेरै समयदेखि लुकाएर राखेको छ 🤫",
+  "तिमीले यसबारे कहिल्यै सोचेकी छैनौ 💭",
+  "यो gift बनाउन पैसा मात्र होइन, धेरै planning लाग्यो 📝",
+  "यो gift तिमीले हातमा समात्न सक्दैनौ ✋",
+  "यो gift बक्समा अटाउँदैन 📦",
+  "Pranab ले धेरै रात सोचेर तयार पारेको हो 🌙",
+  "यो थाहा पाउँदा तिमी खुसीले रुन पनि सक्छौ 🥹",
+  "यो सुनेपछि तिमी पक्कै चिच्याउनेछौ 😱",
+  "तिमीले सबैभन्दा पहिला कसलाई भन्छौ होला? 🤔",
+  "यो तिम्रो लागि मात्र हो, अरू कसैको होइन 💝",
+  "भोलि सबै खुल्छ… आज रात राम्ररी सुत 😴",
+  "बाँकी छ केवल एक रात… 🌙",
+  "आज रात १२ बजे घडी हेर ⏰ 💖"
+]; // the last 13 clues each reveal one letter of HAPPY BIRTHDAY. Add more lines at the TOP for earlier start days.
+var MSG = ["HAPPY","BIRTHDAY"];
+var MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function npDay(ms){ return Math.floor((ms + 20700000) / 86400000); } // Nepal = UTC+5:45
+var UNLOCK_DAY = npDay(UNLOCK);
+function getDaysLeft(){ var m = /^#test-(\d+)$/.exec(location.hash); return m ? parseInt(m[1], 10) : UNLOCK_DAY - npDay(clockNow()); }
+var tw = null, lastIdx = null;
+function typeText(t){
+  var el = $("cbox"), ch = Array.from(t), i = 0; clearInterval(tw); el.textContent = "";
+  tw = setInterval(function(){ i++; el.textContent = ch.slice(0, i).join(""); if (i >= ch.length) clearInterval(tw); }, 35);
+}
+function seenStreak(day){
+  try {
+    var a = JSON.parse(localStorage.getItem("niru_seen") || "[]");
+    if (a.indexOf(day) < 0){ a.push(day); localStorage.setItem("niru_seen", JSON.stringify(a)); }
+    var n = 0; while (a.indexOf(day - n) > -1) n++; return n;
+  } catch (e) { return 0; }
+}
+function renderClues(){
+  var N = CLUES.length, idx = Math.min(N - getDaysLeft(), N - 1);
+  if (idx === lastIdx) return; lastIdx = idx;
+  var shown = Math.max(0, idx - 1), k = 0, sh = "";
+  MSG.forEach(function(w){ sh += '<span class="w">'; w.split("").forEach(function(c){ sh += "<b>" + (k < shown ? c : "&nbsp;") + "</b>"; k++; }); sh += "</span>"; });
+  $("slots").innerHTML = sh;
+  var th = "", first = "";
+  for (var i = 0; i < N; i++){
+    var d = new Date((UNLOCK_DAY - N + i) * 86400000), lab = MON[d.getUTCMonth()] + " " + d.getUTCDate();
+    if (i === 0) first = lab;
+    th += '<div class="tile ' + (i < idx ? "past" : i === idx ? "today" : "lock") + '" data-i="' + i + '" data-l="' + lab + '">' + (i < idx ? "✅" : i === idx ? "✨" : "🔒") + "<br>" + lab + "</div>";
+  }
+  $("tiles").innerHTML = th;
+  Array.prototype.forEach.call($("tiles").children, function(el){
+    el.onclick = function(){ var i = +el.getAttribute("data-i");
+      if (i <= lastIdx && i >= 0) typeText(CLUES[i]); else typeText("🔒 यो clue " + el.getAttribute("data-l") + " मा खुल्छ। अहिले peek गर्न मिल्दैन 😜"); };
+  });
+  if (idx < 0){ typeText("🔒 Clue calendar " + first + " बाट सुरु हुन्छ। त्यसपछि रोज एक पटक आऊ 💖"); $("cstreak").textContent = ""; }
+  else { typeText(CLUES[idx]); var st = seenStreak(npDay(clockNow())); $("cstreak").textContent = st >= 2 ? "🔥 " + st + " दिन लगातार!" : "आजको clue खुल्यो ✅ भोलि फेरि आऊ"; }
+}
+
+// Lock + countdown
+var timer = null;
+function tick(){
+  var open = (location.hash === "#preview") || (clockNow() !== null && clockNow() >= UNLOCK);
+  if (open){ if (timer) clearInterval(timer); if (!$("locked").classList.contains("hidden")) show("s1"); return true; }
+  var now = clockNow();
+  if (now === null){ $("count").innerHTML = "<p style=\"font-size:14px\">⏳ समय जाँच गर्दै… (इन्टरनेट चाहिन्छ)</p>"; return false; }
+  var s = Math.floor((UNLOCK - now) / 1000);
+  var d = Math.floor(s/86400), h = Math.floor(s%86400/3600), m = Math.floor(s%3600/60), sec = s%60;
+  $("count").innerHTML = [[d,"days"],[h,"hours"],[m,"mins"],[sec,"secs"]].map(function(p){
+    return "<div><b>" + p[0] + "</b><span>" + p[1] + "</span></div>"; }).join("");
+  $("count").classList.toggle("pulse", s < 86400);
+  $("lastday").classList.toggle("hidden", s >= 86400);
+  renderClues();
+  return false;
+}
+if (tick()) show("s1"); else { show("locked"); timer = setInterval(tick, 1000); }
+
+// Guess game: playful and random. Nothing here confirms, denies or hints at anything about the real gift.
+var GR = {
+  cold:["Not even close 🥶","Antarctica जत्तिकै टाढा 🧊","पानी पनि यो भन्दा तातो हुन्छ 😂","Nope! अर्को try गर 😜","Universe ले हाँस्दै टाउको हल्लायो 🙃"],
+  cool:["अलिअलि… चिसै छ 🌬️","Hmm, cold-ish 😅","नजिक छैन, तर टाढा पनि छैन 🤔","Universe ले भन्यो: 'हम्म… रोचक!' 🧐"],
+  warm:["Warm 🌡️ अलि नजिक!","Close… तर होइन 😏","त्यतैतिर जाऊ… 👀","Universe ले आँखा झिम्क्यायो 😉"],
+  hot:["Close enough! 🔥 तर म भन्दिनँ 😜","तातो! 🥵 Pranab हाँसिरहेको छ","ओहो! 🔥 साँच्चै? … भन्दिनँ 🤐","🚨 Alert! Pranab को पसिना आयो 😂"]
+};
+var PRANAB = [
+  "Pranab? 😏 उसलाई त तिमीले पहिल्यै कब्जा गरिसक्यौ!",
+  "Pranab त delivery boy मात्र हो 📦😂 मालिक अर्कै छ!",
+  "🚨 Pranab लाई सोध्न मनाही छ! उसको Secret Agent mode ON छ 🕵️",
+  "Pranab सँग मीठो बोलेर hint पाइन्छ भन्ने सपना नदेख 😜",
+  "Pranab लाई सोध्यौ भने ऊ भन्छ: 'मलाई केही थाहा छैन' 🤥",
+  "Pranab ले यो पढ्दै छ र लुकेर हाँसिरहेको छ 😂",
+  "Pranab को नाम धेरै लिइस् भने gift बदलिन्छ है! 😈",
+  "Pranab को lie detector test चलिरहेको छ… 📟 Result: 'म भन्दिनँ' 🤐",
+  "Pranab भन्दा धेरै planning गर्ने त Universe नै हो ✨"
+];
+var RULES = [
+  {w:["pranab","प्रणब","प्रणव"], a:PRANAB, lv:"hot"},
+  {w:["love","maya","माया","i love"], a:["Aww 🥰 Pranab पनि यही भन्छ… तर gift को कुरा भन्दैन 😜","माया त छँदैछ! 💖 अब gift को guess गर","Universe ले भन्यो: 'यी दुईको माया हेर!' 🫶"], lv:"warm"},
+  {w:["hint","clue","bata","बता","bhana","भन"], a:["Hint माग्नु मनाही छ! 😂 daily clue हेर","Universe: 'Hint? पैसा लाग्छ।' 💸😜","कडा नियम: एक दिनमा एक clue मात्र! 🔒"], lv:"cool"},
+  {w:["birthday","bday","जन्मदिन","happy"], a:["🎂 अहिले होइन! १२ बजेपछि मात्र 😉","Birthday त आउँदैछ… ⏳ धैर्य गर!"], lv:"warm"},
+  {w:["gold","ring","necklace","jewel","सुन","गहना","earring"], a:["गहना? 💍 Pranab को खल्ती हेर्छु… अम्…😅 म भन्दिनँ!","चम्किलो चीज? ✨ Universe ले न हो न होइन भन्दैन 🤐"], lv:"warm"},
+  {w:["phone","iphone","laptop","watch","gadget","tablet"], a:["Gadget? 📱 Pranab ले Google गर्‍यो, तर नतिजा सुनाउँदैन 😜","Tech? 🤖 Universe को wifi अहिले off छ!"], lv:"cool"},
+  {w:["flower","rose","chocolate","cake","फूल"], a:["मीठो कुरा? 🍫 म त भन्दिनँ!","फूल? 🌹 Universe ले सुँघ्यो र 'हम्म' भन्यो 😏"], lv:"warm"},
+  {w:["money","cash","paisa","पैसा","cheque"], a:["पैसा? 💸 Pranab ले हाँस्दै भन्यो: 'होइन होइन' … वा हो? 😂","Money? 🤑 Universe को bank बन्द छ आज!"], lv:"cool"}
+];
+var GP = {cold:8, cool:32, warm:62, hot:90}, gcount = 0, lastMsg = "", hist = [];
+var EMO = {cold:"🥶", cool:"🌬️", warm:"🌡️", hot:"🔥"};
+function ghash(t){ var h = 0; for (var i = 0; i < t.length; i++) h = (h * 31 + t.charCodeAt(i)) >>> 0; return h; }
+function pick(a){ var m, n = 0; do { m = a[Math.floor(Math.random() * a.length)]; n++; } while (a.length > 1 && m === lastMsg && n < 10); lastMsg = m; return m; }
+function guess(){
+  var v = $("gin").value.trim(); if (!v){ $("gin").focus(); return; }
+  var t = v.toLowerCase(), r = ghash(t) % 10;
+  var lv = r < 4 ? "cold" : r < 7 ? "cool" : r < 9 ? "warm" : "hot", msg = null;
+  for (var i = 0; i < RULES.length && !msg; i++){
+    if (RULES[i].w.some(function(w){ return t.indexOf(w) > -1; })){ msg = pick(RULES[i].a); lv = RULES[i].lv; }
+  }
+  if (!msg) msg = pick(GR[lv]);
+  gcount++;
+  $("gres").textContent = msg;
+  $("mk").style.left = Math.max(4, Math.min(96, GP[lv] + (Math.random() * 10 - 5))) + "%";
+  var g = $("gres"); g.classList.remove("shake"); void g.offsetWidth; if (lv === "hot") g.classList.add("shake");
+  hist.unshift(v + " " + EMO[lv]); hist = hist.slice(0, 8);
+  $("ghist").innerHTML = hist.map(function(h){ return '<span class="chip"></span>'; }).join("");
+  Array.prototype.forEach.call($("ghist").children, function(el, k){ el.textContent = hist[k]; });
+  $("gcnt").textContent = "Guess #" + gcount + (gcount >= 7 ? " · Universe: countdown कुर, guess नगर 😜" : "");
+  $("gin").value = ""; $("gin").focus();
+}
+$("gbtn").onclick = guess;
+$("gin").addEventListener("keydown", function(e){ if (e.key === "Enter") guess(); });
+
+// Step 1: blow the candle, then wish
+$("flame").onclick = function(){
+  this.textContent = "💨"; this.style.animation = "none";
+  sparkle(60);
+  setTimeout(function(){ $("candle").classList.add("hidden"); $("wishbox").classList.remove("hidden"); $("wish").focus(); }, 900);
+};
+function manifest(){
+  var v = $("wish").value.trim();
+  if (!v){ $("wish").focus(); return; }
+  $("echo").textContent = "“" + v + "”";
+  show("send");
+  var msgs = ["Universe लाई सम्पर्क गर्दै…","तिम्रो wish पढ्दै…","Pranab लाई सोध्दै… 👀","Magic थप्दै ✨","जवाफ आउँदैछ…"];
+  var i = 0; $("barfill").style.width = "0";
+  setTimeout(function(){ $("barfill").style.width = "100%"; }, 50);
+  var mt = setInterval(function(){ i++; if (i < msgs.length) $("sendmsg").textContent = msgs[i]; }, 700);
+  setTimeout(function(){ clearInterval(mt); show("s2"); }, 3600);
+}
+$("go").onclick = manifest;
+$("wish").addEventListener("keydown", function(e){ if (e.key === "Enter") manifest(); });
+
+// Step 2: the No button that cannot be pressed
+var taunts = ["राम्रो प्रयास! 😏","बटन लजायो 🙈","अझै No?","इमानदार बन…","चिप्लियो!","Yes भन न 💖","समात्न सकिन्न! 😜"];
+var dodges = 0, yesScale = 1, lastDodge = 0;
+function dodge(e){
+  if (e){ e.preventDefault(); e.stopPropagation(); }
+  var b = $("no"), tnow = performance.now();
+  if (tnow - lastDodge < 250) return; // one approach = one dodge (hover/touch/click fire several events)
+  lastDodge = tnow;
+  dodges++;
+  if (dodges >= 10){ b.style.display = "none"; $("taunt").textContent = "No ले resign दियो 😂 अब Yes मात्र बाँकी छ!"; $("yes").style.transform = "scale(2)"; return; }
+  b.style.position = "fixed"; b.style.zIndex = 10;
+  var w = b.offsetWidth, h = b.offsetHeight;
+  b.style.left = (Math.random() * (window.innerWidth - w - 20) + 10) + "px";
+  b.style.top = (Math.random() * (window.innerHeight - h - 20) + 10) + "px";
+  $("taunt").textContent = taunts[dodges % taunts.length];
+  yesScale = Math.min(yesScale + 0.12, 1.9);
+  $("yes").style.transform = "scale(" + yesScale + ")";
+}
+["mouseover","pointerenter","touchstart","pointerdown","click","focus"].forEach(function(ev){ $("no").addEventListener(ev, dodge, {passive:false}); });
+
+$("yes").onclick = function(){ show("s3"); confetti(120); setupScratch(); };
+
+// Step 3: scratch card
+function setupScratch(){
+  var box = $("scratch"), c = $("sc"), r = box.getBoundingClientRect();
+  c.width = Math.round(r.width); c.height = Math.round(r.height);
+  var x = c.getContext("2d");
+  var g = x.createLinearGradient(0,0,c.width,c.height);
+  g.addColorStop(0,"#c9ced6"); g.addColorStop(.5,"#eef0f3"); g.addColorStop(1,"#b6bcc6");
+  x.fillStyle = g; x.fillRect(0,0,c.width,c.height);
+  x.fillStyle = "#6b7280"; x.font = "bold 16px Roboto, sans-serif"; x.textAlign = "center"; x.textBaseline = "middle";
+  x.fillText("✨ यहाँ scratch गर ✨", c.width/2, c.height/2);
+  var down = false, moves = 0, done = false;
+  function scratch(e){
+    if (!down || done) return;
+    var b = c.getBoundingClientRect();
+    var px = (e.clientX - b.left) * c.width / b.width, py = (e.clientY - b.top) * c.height / b.height;
+    x.globalCompositeOperation = "destination-out";
+    x.beginPath(); x.arc(px, py, 20, 0, 7); x.fill();
+    if (++moves % 8 === 0) check();
+  }
+  function check(){
+    var d = x.getImageData(0,0,c.width,c.height).data, clear = 0, n = 0;
+    for (var i = 3; i < d.length; i += 64){ n++; if (d[i] === 0) clear++; }
+    if (clear / n > 0.5){ done = true; c.style.transition = "opacity .6s"; c.style.opacity = "0";
+      setTimeout(function(){ c.style.display = "none"; }, 650);
+      $("after").classList.remove("hidden"); confetti(200); }
+  }
+  c.onpointerdown = function(e){ down = true; try{ c.setPointerCapture(e.pointerId); }catch(_){} scratch(e); };
+  c.onpointermove = scratch;
+  c.onpointerup = c.onpointercancel = function(){ down = false; };
+}
+
+// Confetti / sparkles
+function confetti(n){
+  var c = $("fx"), x = c.getContext("2d");
+  c.width = window.innerWidth; c.height = window.innerHeight;
+  var cols = ["#f94144","#f3722c","#f9c74f","#90be6d","#577590","#43aa8b","#9b5de5"], ps = [];
+  for (var i = 0; i < n; i++) ps.push({x:Math.random()*c.width, y:-20-Math.random()*c.height*0.6, r:4+Math.random()*6,
+    vx:-1.5+Math.random()*3, vy:2+Math.random()*4, col:cols[i%cols.length], rot:Math.random()*6});
+  var t0 = Date.now();
+  (function frame(){
+    x.clearRect(0,0,c.width,c.height);
+    ps.forEach(function(p){ p.x += p.vx; p.y += p.vy; p.rot += .1; x.save(); x.translate(p.x,p.y); x.rotate(p.rot);
+      x.fillStyle = p.col; x.fillRect(-p.r/2,-p.r/2,p.r,p.r*1.6); x.restore(); });
+    if (Date.now() - t0 < 4500) requestAnimationFrame(frame); else x.clearRect(0,0,c.width,c.height);
+  })();
+}
+function sparkle(n){ confetti(n); }
+</script>
+</body>
+</html>
